@@ -2,6 +2,13 @@ import os
 
 import streamlit as st
 
+def give_defensive_warning() -> None:
+    """
+    Let the user know that you can get incorrect answers.
+    """
+    st.warning("""We cannot guarantee the SQL generated will give you the answer you are looking for, especially as written.
+               Be as precise as possible, and if you can, specify the tables in your database, and their schema.
+               """, icon=None)
 
 def get_openai_api_key() -> None:
     """
